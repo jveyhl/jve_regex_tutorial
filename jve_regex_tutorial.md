@@ -25,7 +25,7 @@ This tutorial is to explain how to use the regular expression ```/^([a-z0-9_\.-]
 ## Regex Components
 
 ### Anchors
-
+Anchors are used to specify a starting point and/or ending point of a pattern. For this tutorial, we will consider two types of anchor; the caret ```^``` and the dollar sign ```$```. The caret indicates the start of a string or line. The dollar sign indicates the end of a string or line.
 
 ### Quantifiers
 
@@ -42,6 +42,7 @@ This tutorial is to explain how to use the regular expression ```/^([a-z0-9_\.-]
 ### Greedy and Lazy Match
 
 ### Boundaries
+In the Anchors section, we learned about the caret and dollar sign to indicate the start and end of a string or line, respectively. However, there is another type of anchor; we can anchor regular expressions to word boundaries (the start or end of a word).
 
 ### Back-references
 
