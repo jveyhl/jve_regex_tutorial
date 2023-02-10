@@ -29,24 +29,13 @@ Anchors are used to specify a starting point and/or ending point of a pattern. F
 
 ### Quantifiers
 
-### OR Operator
-
 ### Character Classes
-
-### Flags
 
 ### Grouping and Capturing
 
 ### Bracket Expressions
 
 ### Greedy and Lazy Match
-
-### Boundaries
-In the Anchors section, we learned about the caret and dollar sign to indicate the start and end of a string or line, respectively. However, there is another type of anchor; we can anchor regular expressions to word boundaries (the start or end of a word).
-
-### Back-references
-
-### Look-ahead and Look-behind
 
 ## Author
 
