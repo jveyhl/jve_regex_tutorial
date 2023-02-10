@@ -1,8 +1,8 @@
 # Tutorial: Email Regular Expression
 
-The purpose or this tutorial is to explain how to use a regular expression -- but what are regular expressions? Regular expressions, also known as “Regex”, are a tool for searching and matching parts of a text by describing the patterns that should be used to identify those parts. This is accomplished by creating a set of symbols that describes the pattern of the text you are interested in.
+The purpose or this tutorial is to explain how to use a regular expression -- but what are regular expressions? Regular expressions, also known as “Regex”, are a tool for searching and matching parts of a text by describing the patterns that should be used to identify those parts. This is accomplished by creating a set of symbols that describes the pattern of the text we are interested in.
 
-One reason for using regex is format validation for user input such as ensuring a credit card number has the correct number of digits or to test if an email address is in a valid format. In this tutorial, we will be learning about the latter.
+One reason for using regex is to validate user input such as ensuring a credit card number has the correct number of digits or that an email address is in a valid format. In this tutorial, we will be learning about the latter.
 
 ## Summary
 
@@ -30,21 +30,32 @@ If we wanted to search a string that contains "apple" as its first word, we coul
 If we wanted to search a string that contains "apple" as its last word, we could use the following regex: `/apple$/`.
 
 ### Quantifiers
-Quantifiers allow us to specify the number of times something is repeated. An open curly brace ```{``` signifies the start quantified repetition of a preceding item and a closing curly brace ```}``` signifies the end quantified repetition of a preceding item. Any values placed inside the curly braces represent the minimum and maximum number of times a preceding item can be repeated using the format ```preceding_item{min,max}```.
 
-If we wanted to match numbers with four to eight digits, we could use the following regex: ```\d{4,8}``` 
+Quantifiers allow us to specify the number of times something is repeated. An open curly brace `{` signifies the start quantified repetition of a preceding item and a closing curly brace `}` signifies the end quantified repetition of a preceding item. Any values placed inside the curly braces represent the minimum and maximum number of times a preceding item can be repeated using the format `preceding_item{min,max}`.
 
-Note that in the above example, ```\d``` matches any single digit (i.e. 0-9).
+If we wanted to match numbers with four to eight digits, we could use the following regex: `\d{4,8}`
 
-The plus ```+``` repetition operator specifies that a preceding item can be repeated a minimum of one time and any number above one. 
+Note that in the above example, `\d` matches any single digit (i.e. 0-9).
 
-If we wanted to match numbers with one to infinity digits, we could use the following regex: ```\d+``` 
+The plus `+` repetition operator specifies that a preceding item can be repeated a minimum of one time and any number above one.
 
-Note that the regex in the above example is equivalent to ```\d{1,}``` where no value after the comma represents a maximum value equal to infinity.
+If we wanted to match numbers with one to infinity digits, we could use the following regex: `\d+`
+
+Note that the regex in the above example is equivalent to `\d{1,}` where no value after the comma represents a maximum value equal to infinity.
 
 ### Character Classes
 
+A character class is a notation that matches any symbol from a certain set. The `\d` mentioned in the Quantifiers section of this tutorial is an example of a character class, specifically the “digit” class, and corresponds to any single digit from 0 to 9.
+
+There are also character sets, which use an open square bracket `[` to denote the beginning of a character set, and a closing square bracket `]` to denote the ending of a character set. Character sets are used to define a customized list of characters that we want to match on.
+
+If we wanted to search a text and find the word “grey” and its alternate spelling “gray” we could use the following regex: `/gr[ea]y/`
+
+Note that the set will only match on ONE of the characters in the set. We would need to use a quantifier to match on more than one character in the set.
+
 ### Grouping and Capturing
+
+
 
 ### Bracket Expressions
 
