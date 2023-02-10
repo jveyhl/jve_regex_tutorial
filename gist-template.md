@@ -1,10 +1,12 @@
-# Title (replace with your title)
+# Tutorial: Email Regular Expression
 
-Introductory paragraph (replace this with your text)
+The purpose or this tutorial is to explain how to use a regular expression -- but what are regular expressions? Regular expressions, also known as “Regex”, are a tool for searching and matching parts of a text by describing the patterns that should be used to identify those parts. This is accomplished by creating a set of symbols that describes the pattern of the text you are interested in. 
+
+One reason for using regex is format validation for user input such as ensuring a credit card number has the correct number of digits or to test if an email address is in a valid format. In this tutorial, we will be learning about the latter.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This tutorial is to explain how to use the regular expression ```/([a-z0-9 .-]+)@([da-z.-]+).([a-z.]2,6)$``` to match emails. This is useful for validating the format of an email address submitted by a user.
 
 ## Table of Contents
 
@@ -46,4 +48,4 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Joseph Veyhl [Github](https://github.com/jveyhl/jve_regex_tutorial)
