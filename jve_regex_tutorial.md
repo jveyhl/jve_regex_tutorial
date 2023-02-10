@@ -12,20 +12,20 @@ This tutorial is to explain how to use the regular expression ```/^([a-z0-9_\.-]
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+
 
 ## Regex Components
 
 ### Anchors
 Anchors are used to specify a starting point and/or ending point of a pattern. For this tutorial, we will consider two types of anchor; the caret ```^``` and the dollar sign ```$```. The caret indicates the start of a string or line. The dollar sign indicates the end of a string or line.
+
+If we wanted to search a string that contains "apple" as its first word we could use the following regex: ```/^apple/```.
+
+If we wanted to search a string that contains "apple" as its last word we could use the following regex: ```/apple$/```.
 
 ### Quantifiers
 
