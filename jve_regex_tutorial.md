@@ -47,17 +47,27 @@ Note that the regex in the above example is equivalent to `\d{1,}` where no valu
 
 A character class is a notation that matches any symbol from a certain set. The `\d` mentioned in the Quantifiers section of this tutorial is an example of a character class, specifically the “digit” class, and corresponds to any single digit from 0 to 9.
 
-There are also character sets, which use an open square bracket `[` to denote the beginning of a character set, and a closing square bracket `]` to denote the ending of a character set. Character sets are used to define a customized list of characters that we want to match on.
+There are other character classes such as `\w`, which matches any alphanumeric character from the basic Latin alphabet, including the underscore (i.e. A-Z, a-z, 0-9 and \_).
+
+If we wanted to match words or numbers that are four to eight characters in length, we could use the following regex: `\w{4,8}`
+
+### Grouping and Capturing
+
+Grouping is accomplished by using the open parenthesis `(` to denote the start of a grouped expression and the closing parenthesis `)` to denote the end of a grouped expression. One of the benefits of creating a grouped expression is that we can apply operators to the entire group.
+
+If we wanted to search for a series of repeating characters like “abc” we could use the following regex: `/(abc)+/`
+
+Note that in the above example, we are using the plus `+` quantifier, which allows the group of characters to match anywhere from one to infinity number of times. Therefore, the regex in our example would match on the string “abc” and the string “abcabcabc”.
+
+Whenever you group an expression, the regex engine also captures it by default; it stores whatever text matches the grouped expression in memory for later use.
+
+### Bracket Expressions
+
+Bracket expressions are used to create character sets, and use an open square bracket `[` to denote the beginning of a character set, and a closing square bracket `]` to denote the ending of a character set. Character sets are used to define a customized list of characters that we want to match on.
 
 If we wanted to search a text and find the word “grey” and its alternate spelling “gray” we could use the following regex: `/gr[ea]y/`
 
 Note that the set will only match on ONE of the characters in the set. We would need to use a quantifier to match on more than one character in the set.
-
-### Grouping and Capturing
-
-
-
-### Bracket Expressions
 
 ### Greedy and Lazy Match
 
