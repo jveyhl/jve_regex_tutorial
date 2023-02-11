@@ -1,12 +1,12 @@
 # Tutorial: Email Regular Expression
 
-The purpose or this tutorial is to explain how to use a regular expression -- but what are regular expressions? Regular expressions, also known as “Regex”, are a tool for searching and matching parts of a text by describing the patterns that should be used to identify those parts. This is accomplished by creating a set of symbols that describes the pattern of the text we are interested in.
+The purpose or this tutorial is to explain how the components of a regular expression work -- but what are regular expressions? Regular expressions, also known as “Regex”, are a tool for searching and matching parts of a text by describing the patterns that should be used to identify those parts. This is accomplished by creating a set of symbols that describes the pattern of the text we are interested in.
 
 One reason for using regex is to validate user input such as ensuring a credit card number has the correct number of digits or that an email address is in a valid format. In this tutorial, we will be learning about the latter.
 
 ## Summary
 
-This tutorial will explain how to use the regular expression `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` to match emails. This is useful for validating the format of an email address submitted by a user.
+This tutorial describe and provide examples of the components in the regular expression `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` that is used to match emails. This is regex is useful for validating the format of an email address submitted by a user.
 
 Note that the forward slashes `/` only indicate the start and end of the regex and are not part of the pattern-matching process.
 
