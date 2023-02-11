@@ -92,17 +92,17 @@ Note that the period `.` is a wildcard that will match any character except newl
 
 Now that we know the purpose of each component that makes up the regex `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`, we are able to explain how this expression can verify the format of an email address submitted by a user:
 
-We can use the following email address as an example to explain how the regex will make its matches: “test@gmail.com”.
+We can use the following email address as an example to explain how the regex will make its matches: <span style="color: magenta;">test<area>@gmail.com</span>.
 
-The `^([a-z0-9_\.-]+)` part will match “test”. The regex is using a caret `^` to indicate the start of the string and is using opening and closing parentheses `(` and `)` to define a group that contains a character set. This character set is defined using opening and closing square brackets `[` and `]` and consist of all lowercase letters `a-z`, all integers `0-9`, the underscore `_`, the period `\.` (escaped using a backslash) and the dash `-`. Finally a `+` quantifier is applied to the character set so that it matches at least once.
+The `^([a-z0-9_\.-]+)` part will match <span style="color: magenta;">test</span>. The regex is using a caret `^` to indicate the start of the string and is using opening and closing parentheses `(` and `)` to define a group that contains a character set. This character set is defined using opening and closing square brackets `[` and `]` and consist of all lowercase letters `a-z`, all integers `0-9`, the underscore `_`, the period `\.` (escaped using a backslash) and the dash `-`. Finally a `+` quantifier is applied to the character set so that it matches at least once.
 
-The `@` part will match the “@“.
+The `@` part will match <span style="color: magenta;">@</span>.
 
-The `([\da-z\.-]+)` part will match “gmail”. The regex is using opening and closing parentheses `(` and `)` to define a group that contains a character set. This character set is defined using opening and closing square brackets `[` and `]` and consist of the character class `\d` (matches any digit 0-9), all lowercase letters `a-z`, the period `\.` (escaped using a backslash) and the dash `-`. Finally a `+` quantifier is applied to the character set so that it matches at least once.
+The `([\da-z\.-]+)` part will match <span style="color: magenta;">gmail</span>. The regex is using opening and closing parentheses `(` and `)` to define a group that contains a character set. This character set is defined using opening and closing square brackets `[` and `]` and consist of the character class `\d` (matches any digit 0-9), all lowercase letters `a-z`, the period `\.` (escaped using a backslash) and the dash `-`. Finally a `+` quantifier is applied to the character set so that it matches at least once.
 
-The `\.` part will match the “.“.
+The `\.` part will match <span style="color: magenta;">.</span>.
 
-The `([a-z\.]{2,6})$` part will match “com”. The regex is using a dollar sign `$` to indicate the end of the string and is using opening and closing parentheses `(` and `)` to define a group that contains a character set. This character set is defined using opening and closing square brackets `[` and `]` and consist of all lowercase letters `a-z` and the period `\.` (escaped using a backslash). Finally a quantifier is applied to the character set by using opening and closing curly braces `{` and `}` so that it matches a minimum of two times and a maximum of 6 times.
+The `([a-z\.]{2,6})$` part will match <span style="color: magenta;">com</span>. The regex is using a dollar sign `$` to indicate the end of the string and is using opening and closing parentheses `(` and `)` to define a group that contains a character set. This character set is defined using opening and closing square brackets `[` and `]` and consist of all lowercase letters `a-z` and the period `\.` (escaped using a backslash). Finally a quantifier is applied to the character set by using opening and closing curly braces `{` and `}` so that it matches a minimum of two times and a maximum of 6 times.
 
 ## Author
 
