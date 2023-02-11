@@ -71,6 +71,22 @@ Note that the set will only match on ONE of the characters in the set. We would 
 
 ### Greedy and Lazy Match
 
+The principle of greedy expressions describes how a regex engine makes choices about what it returns as a match. This becomes especially important when repetition expressions are used because these will make our strings an indeterminate length and may match several different things.
+
+Standard repetition quantifiers are greedy by default, which means that the regex tries to match the longest possible string. The `+` is greedy; it only “gives back” as little as possible to make the match. It tries to match as much as possible before giving control to the next portion of the regex.
+
+If we wanted to search a text for “Interstella 5555”, we could use the following regex: `/.+[0-9]+/`
+
+The `.+` portion matches “Interstella 555” and the `[0-9]` portion will only match the last “5” in the string. This is because the `.+` is greedy and tries to match as much as possible before giving control to the `[0-9]+` portion of the regex.
+
+Lazy expressions, as you might expect, are the opposite of greedy expressions. To change the default behaviour from greedy to lazy, we need to use a question mark `?` to make the preceding quantifier lazy. In this case “lazy” means that the affected portion of the regex will match as little as possible before giving control to the next portion of the regex.
+
+To make the example above lazy, we could use the following regex: `/.+?[0-9]+/`
+
+The `.+?` portion matches “Interstella ” (including the space between the “a” and the first “5”) and the `[0-9]` portion will match the “5555” in the string. This is because the `.+?` is lazy and tries to match as little as possible before giving control to the `[0-9]+` portion of the regex.
+
+Note that the period `.` is a wildcard that will match any character except newline. 
+
 ## Author
 
 Joseph Veyhl [Github](https://github.com/jveyhl/jve_regex_tutorial)
