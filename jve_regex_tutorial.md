@@ -106,4 +106,6 @@ The `([a-z\.]{2,6})$` part will match <span style="color: magenta;">"com"</span>
 
 ## Author
 
+I graduated from the University of Toronto with an M.Sc. in Molecular Genetics and am currently a Research Associate at a Contract Research Ogranization (CRO) in Montreal. Working in the fast-paced field of genetics has allowed be to develop excellent organizational skills and the ability to solve complex problems.
+
 Joseph Veyhl [Github](https://github.com/jveyhl/jve_regex_tutorial)
