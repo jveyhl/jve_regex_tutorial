@@ -6,7 +6,7 @@ One reason for using regex is to validate user input such as ensuring a credit c
 
 ## Summary
 
-This tutorial describe and provide examples of the components in the regular expression `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` that is used to match emails. This is regex is useful for validating the format of an email address submitted by a user.
+This tutorial describes and provides examples of the components in the regular expression `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` that is used to match emails. This regex is useful for validating the format of an email address submitted by a user.
 
 Note that the forward slashes `/` only indicate the start and end of the regex and are not part of the pattern-matching process.
 
